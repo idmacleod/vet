@@ -17,7 +17,20 @@ const registerAnimal = function (event) {
 }
 
 const addToRegister = function (target) {
-    console.log(target.name.value);    
+    console.log(target.name.value);
+    const register = document.querySelector('#register');
+    const listItem = document.createElement('li');
+    const table = document.createElement('table');
+    const tableRow = document.createElement('tr');
+    const tableHeader = document.createElement('th');
+    tableHeader.textContent = 'Name';
+    const tableData = document.createElement('td');
+    tableData.textContent = target.name.value;
+    tableRow.appendChild(tableHeader);
+    tableRow.appendChild(tableData);
+    table.appendChild(tableRow);
+    listItem.appendChild(table);
+    register.appendChild(listItem);
 }
 
 const clear = function (event) {
