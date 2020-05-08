@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
 const typeOptions = {
     'Cat': '🐈',
     'Dog': '🐩',
-    'Rabbit': 🐇,
+    'Rabbit': '🐇',
     'Mouse': '🐁',
     'Rat': '🐀',
     'Parrot': '🦜',
     'Otter': '🦦',
-    'Duck': '🦆'
-    'Chicken': '🐓'
+    'Duck': '🦆',
+    'Chicken': '🐓',
     'Tiger': '🐅',
     'Dragon': '🐉'
 }
