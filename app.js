@@ -19,10 +19,12 @@ const typeOptions = {
     'Rat': '🐀',
     'Parrot': '🦜',
     'Otter': '🦦',
+    'Llama': '🦙',
     'Duck': '🦆',
     'Chicken': '🐓',
     'Tiger': '🐅',
-    'Dragon': '🐉'
+    'Dragon': '🐉',
+    'Alien': '👽'
 }
 
 const vetOptions = ['Doctor Dolittle', 'James Herriott', 'Nurse Joy'];
@@ -50,7 +52,7 @@ const registerAnimal = function (event) {
     listItem.appendChild(header);
     listItem.appendChild(table);
     register.appendChild(listItem);
-    // this.reset();
+    this.reset();
 }
 
 const addRowToTable = function (table, header, data) {
