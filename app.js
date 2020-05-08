@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log('JavaScript Successfully Loaded');
 
-    const registerAnimalForm = document.querySelector('#register-animal');
+    const registerAnimalForm = document.querySelector('#register-animal-form');
     registerAnimalForm.addEventListener('submit', registerAnimal);
 
-    const clearButton = document.querySelector('#clearRegister');
-    clearButton.addEventListener('click', clearRegister);
+    const clearRegisterButton = document.querySelector('#clear-register-button');
+    clearRegisterButton.addEventListener('click', clearRegister);
 
     const typeOptions = {
         'Cat': '🐈',
@@ -31,25 +31,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const registerAnimal = function (event) {
     event.preventDefault();
-    addToRegister(event.target);
-    this.reset();
-}
-
-const addToRegister = function (target) {
     const register = document.querySelector('#register');
     const listItem = document.createElement('li');
     const table = document.createElement('table');
-    addRow(table, 'Name:', target.name.value);
-    addRow(table, 'Date of Birth:', target.dob.value);
-    addRow(table, 'Type:', target.type.value);
-    addRow(table, 'Contact Tel:', target.contact.value);
-    addRow(table, 'Notes:', target.notes.value);
-    addRow(table, 'Vet:', target.vet.value);
+    addRowToTable(table, 'Name:', event.target.name.value);
+    addRowToTable(table, 'Date of Birth:', event.target.dob.value);
+    addRowToTable(table, 'Type:', event.target.type.value);
+    addRowToTable(table, 'Contact Tel:', event.target.contact.value);
+    addRowToTable(table, 'Notes:', event.target.notes.value);
+    addRowToTable(table, 'Vet:', event.target.vet.value);
     listItem.appendChild(table);
     register.appendChild(listItem);
+    this.reset();
 }
 
-const addRow = function (table, header, data) {
+const addRowToTable = function (table, header, data) {
     const tableRow = document.createElement('tr');
     const tableHeader = document.createElement('th');
     tableHeader.textContent = header;
