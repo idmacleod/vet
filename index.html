@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patriothall Veterinary Practice</title>
     <script src="app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,18 +14,20 @@
         <h1>Patriothall Veterinary Practice</h1>
     </header>
 
+    <h2>Register New Animal</h2>
+
     <form id="register-animal-form">
         <table>
             <tr>
-                <th><label for="name">Name</label></th>
+                <th><label for="name">Name:</label></th>
                 <td><input type="text" id="name" required></td>
             </tr>
             <tr>
-                <th><label for="dob">Date of Birth</label></th>
+                <th><label for="dob">Date of Birth:</label></th>
                 <td><input type="date" id="dob" required></td>
             </tr>
             <tr>
-                <th><label for="type-select">Type</label></th>
+                <th><label for="type-select">Type:</label></th>
                 <td>
                     <select name="type" id="type-select" required>
                         <option value="">Required</option>
@@ -32,28 +35,29 @@
                 </td>
             </tr>
             <tr>
-                <th><label for="contact">Owner Contact Number</label></th>
+                <th><label for="contact">Contact Tel:</label></th>
                 <td><input type="tel" id="contact" required></td>
             </tr>
             <tr>
-                <th><label for="notes">Treatment Notes</label></th>
+                <th><label for="notes">Treatment Notes:</label></th>
                 <td><textarea name="notes" id="notes"></textarea></td>
             </tr>
             <tr>
-                <th><label for="vet-select">Vet Assigned</label></th>
+                <th><label for="vet-select">Vet Assigned:</label></th>
                 <td>
-                    <select name="vet" id="vet-select">
-                        <option value="">Optional</option>
+                    <select name="vet" id="vet-select" required>
+                        <option value="">Required</option>
                     </select>
                 </td>
             </tr>
         </table>
-        <input type="submit" value="Register Animal">
+        <input class="btn" type="submit" value="Register Animal">
     </form>
 
-    <button id="clear-register-button">Clear Register</button>
-
     <h2>Registered Animals</h2>
+    
+    <button id="clear-register-button" class="btn">Clear Register</button>
+
     <ul id="register"></ul>
 
 </body>
