@@ -24,12 +24,10 @@
                 <td><input type="date" id="dob" required></td>
             </tr>
             <tr>
-                <th><label for="type">Type</label></th>
+                <th><label for="type-select">Type</label></th>
                 <td>
-                    <select name="type" id="type" required>
+                    <select name="type" id="type-select" required>
                         <option value="">Required</option>
-                        <option value="cat">Cat</option>
-                        <option value="dog">Dog</option>
                     </select>
                 </td>
             </tr>
@@ -42,9 +40,9 @@
                 <td><textarea name="notes" id="notes"></textarea></td>
             </tr>
             <tr>
-                <th><label for="vet">Vet Assigned</label></th>
+                <th><label for="vet-select">Vet Assigned</label></th>
                 <td>
-                    <select name="vet" id="vet">
+                    <select name="vet" id="vet-select">
                         <option value="">Optional</option>
                     </select>
                 </td>
@@ -53,7 +51,7 @@
         <input type="submit" value="Register Animal">
     </form>
 
-    <button id="clear">Clear</button>
+    <button id="clearRegister">Clear Register</button>
 
     <h2>Registered Animals</h2>
     <ul id="register"></ul>
