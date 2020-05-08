@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    console.log('JavaScript Successfully Loaded');
-
     const registerAnimalForm = document.querySelector('#register-animal-form');
     registerAnimalForm.addEventListener('submit', registerAnimal);
 
@@ -15,19 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const vetOptions = ['Doctor Dolittle', 'James Herriott', 'Vetty McVetVet'];
     
-    const addOptions = function (select, options) {
-        for (optionText of options) {
-            const option = document.createElement('option');
-            option.value = optionText;
-            option.textContent = optionText;
-            select.appendChild(option);
-        }
-    }
-    
     addOptions(document.querySelector('#type-select'), Object.keys(typeOptions));
     addOptions(document.querySelector('#vet-select'), vetOptions);
 
 });
+
+const addOptions = function (select, options) {
+    for (optionText of options) {
+        const option = document.createElement('option');
+        option.value = optionText;
+        option.textContent = optionText;
+        select.appendChild(option);
+    }
+}
 
 const registerAnimal = function (event) {
     event.preventDefault();
