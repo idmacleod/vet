@@ -1,5 +1,6 @@
 body {
     font-family: 'Roboto Slab', serif;
+    color: #2b303a;
 }
 
 header {
@@ -12,7 +13,7 @@ header {
 
 form table, form th, form td {
     border-collapse: collapse;
-    border: 1px solid black;
+    border: 1px solid #2b303a;
     margin: 1rem;
 }
 
@@ -39,4 +40,50 @@ input, textarea, select {
 
 .btn:hover, .btn:active {
     box-shadow: 0.25rem 0.25rem 0.5rem #483d8b66;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+li {
+    width: 20rem;
+    background-color: #fffeea;
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #2b303a;
+    border-radius: 1rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem #2b303a66;
+}
+
+li div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+.badge {
+    font-size: 200%;
+}
+
+.delete-btn {
+    all: unset;
+    cursor: pointer;
+    font-size: 75%;
+    background-color: darkred;
+    color: white;
+    margin: 0;
+    padding: 0.1rem 0.5rem;
+    border-radius: 1rem;
+}
+
+.delete-btn:hover, .delete-btn:active {
+    box-shadow: 0.1rem 0.1rem 0.25rem #483d8b66;
 }
