@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Patriothall Veterinary Practice</h1>
+    </header>
+
+    <form id="register-animal">
+        <table>
+            <tr>
+                <th><label for="name">Name</label></th>
+                <td><input type="text" id="name" required></td>
+            </tr>
+            <tr>
+                <th><label for="dob">Date of Birth</label></th>
+                <td><input type="date" id="dob" required></td>
+            </tr>
+            <tr>
+                <th><label for="type">Type</label></th>
+                <td>
+                    <select name="type" id="type" required>
+                        <option value="">Required</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="contact">Owner Contact Number</label></th>
+                <td><input type="tel" id="contact" required></td>
+            </tr>
+            <tr>
+                <th><label for="notes">Treatment Notes</label></th>
+                <td><textarea name="notes" id="notes"></textarea></td>
+            </tr>
+            <tr>
+                <th><label for="vet">Vet Assigned</label></th>
+                <td>
+                    <select name="vet" id="vet">
+                        <option value="">Optional</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Register Animal">
+    </form>
+
+    <button id="clear">Clear</button>
+
+    <h2>Registered Animals</h2>
+    <ul id="all-animals"></ul>
+
+</body>
+</html>
