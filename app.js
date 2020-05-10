@@ -23,8 +23,7 @@ const typeOptions = {
     'Duck': '🦆',
     'Chicken': '🐓',
     'Tiger': '🐅',
-    'Dragon': '🐉',
-    'Alien': '👽'
+    'Dragon': '🐉'
 }
 
 const vetOptions = ['Doctor Dolittle', 'James Herriott', 'Nurse Joy'];
